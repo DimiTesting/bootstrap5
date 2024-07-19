@@ -1,0 +1,74 @@
+#hero{
+    height: 100vh;
+    position: relative;
+}
+
+#hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/home.jpg') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 2;
+}
+
+#hero .dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+#hero .content, 
+#hero .card{
+    margin: 150px 0px;
+}
+
+#hero .card{
+    width: 450px;
+    height: 400px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(15, 97, 230);
+    color: white;
+}
+
+#hero .card input{
+    width: 100%;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+    #hero .content{
+        display: none;
+    }
+
+    #explore .container, 
+    #create .container,
+    #share .container{
+        text-align: center;
+    }
+
+    #explore .container h1, 
+    #create .container h1, 
+    #share .container h1{
+        font-size: 3rem;
+    }
+
+    #image{
+        width: 300px !important; 
+        height: 200px !important;
+    }
+
+    #close{
+        margin-left: 200px !important;
+    }
+}
